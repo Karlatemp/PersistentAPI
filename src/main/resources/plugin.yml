@@ -1,0 +1,5 @@
+main: io.github.karlatemp.persistentapi.PersistentAPI
+name: PersistentAPI
+version: "1.0.0-SNAPSHOT"
+commands:
+  pes: {}
