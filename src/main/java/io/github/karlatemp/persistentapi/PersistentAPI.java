@@ -13,9 +13,11 @@ import io.github.karlatemp.persistentapi.nms.ItemMetaNBTGetter;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataHolder;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
@@ -42,6 +44,16 @@ public class PersistentAPI extends JavaPlugin {
         GET_PersistentDataContainer = a;
     }
 
+    /**
+     * Returns a custom tag container capable of storing tags on the object.
+     * <p>
+     * Note that the tags stored on this container are all stored under their
+     * own custom namespace therefore modifying default tags using this
+     * {@link PersistentDataHolder} is impossible.
+     *
+     * @param meta The meta
+     * @return the persistent metadata container
+     */
     public static PersistentDataContainer getPersistentDataContainer(ItemMeta meta) {
         return GET_PersistentDataContainer.apply(meta);
     }

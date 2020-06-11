@@ -2,6 +2,12 @@
 
 -----
 
+Here is PersistentAPI.
+
+Only ItemMeta is supported, 
+because TileEntity and/or Entity do not have any extended storage
+
+## How to use
 
 ItemMeta:
 ```text
